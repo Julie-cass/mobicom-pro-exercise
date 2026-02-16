@@ -7,6 +7,8 @@ import Home from "./pages/Home.jsx";
 import Settings from "./pages/Settings.jsx"
 import Statistics from "./pages/Statistics.jsx"
 
+import Error from "./pages/Error.jsx"
+
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +17,7 @@ const Router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "settings", element: < Settings/> },
         { path: "statistics", element: < Statistics/> },
+         { path: "error", element: < Error/> },
     ],
   },
 ]);

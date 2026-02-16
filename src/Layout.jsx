@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <>
       <header>
-   <Navigation/>
+ 
       </header>
 
       <main>
@@ -16,7 +16,7 @@ export default function Layout() {
       </main>
 
       <footer>
-        {/* Footer */}
+      <Navigation/>
       </footer>
     </>
   );
