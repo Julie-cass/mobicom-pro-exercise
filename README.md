@@ -1,44 +1,16 @@
-![Mobicom Logo](https://mobicom-pro.com/wp-content/uploads/2025/01/Mobicom-pro_logotype_blue_w1080.png "Mobicom Logo")
+# React + Vite
 
-# Frontend test case
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-_Dette er en opgave udviklet for at give et indblik i hvordan en opgave i Mobicom-Pro kunne se ud for en frontend-udvikler. Opgaven giver samtidig en mulighed for at gøre sig selv bemærket hos os, da vi altid er på udgik efter engagerede og dygtige kollegaer._
+Currently, two official plugins are available:
 
-_Der stilles ikke nogen krav om benyttede teknologier og tredje parts biblioteker må også gerne benyttes._
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-_Afleveringen sker ved at indsende link til git-repo med opgaven i til:
-ar@mobicom-pro.com eller ved at tilføje det som en pull-request. Ved at sende en opgave accepterer du at Mobicom-Pro må kontakte dig med henblik på en eventuel ansættelse._
+## React Compiler
 
-## Opgave
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Byg det vedhæftede design i en mobilforberedt version, dette kan være en html side.
+## Expanding the ESLint configuration
 
-## Assets
-
-- [Design](https://xd.adobe.com/view/773f8cb0-5ef2-4b42-8fbc-0f1328a6fbbe-226c/)
-- [Ikoner](https://github.com/mobicom-pro-aps/frontend-developer-exercise/tree/main/assets/icons)
-- [Api](https://exercise.mobicom-pro.com/docs)
-
-## Design
-
-Det ønskes udviklet i til tilknyttede design.
-
-Det er ikke et krav at designet er pixel-perfect og der må gerne foretages justeringer eller andre mindre ændringsforslag.
-
-## Kravspecs
-
-### Tre navigerbare sider
-
-- Forside
-  - Scrollable med fast menubjælke i bund
-- Termostat
-  - Indstilling er temperatur
-  - Visning af temperatur inde og ude
-  - Justering af ventilator
-  - Vælge mellem driftsmodus
-  - Tænde og slukke
-- Statistik
-  - Se forbrug
-  - Se gennemsnit
-
-Der stilles en test-api til rådighed for at kunne hente og sende data.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
