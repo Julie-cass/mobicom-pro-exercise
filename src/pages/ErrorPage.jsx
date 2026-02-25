@@ -1,7 +1,7 @@
 import {NavLink} from 'react-router-dom';
 
 
-export default function Error(){
+export default function ErrorPage(){
     return(
         <>
         <h1>this page does not exist</h1>
