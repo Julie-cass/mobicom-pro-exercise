@@ -1,0 +1,39 @@
+.SmartSetSec {
+
+}
+
+
+.SmartSetCompBox {
+    max-width: 13rem;
+    box-sizing: border-box;
+    padding: 0.6rem;
+
+    background: white;
+    border-radius: 0.5rem;
+
+    margin: 1rem 0;
+
+    label {
+        display: flex;
+        margin-bottom: 0.5rem;
+
+            color: #0000007f;
+
+    }
+}
+
+.deviceRow {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;          
+  width: 100%;
+
+}
+
+.deviceName {
+  text-transform: capitalize;
+}
+
+.SmartSetCompTitle {
+    color: #000000a6;
+}

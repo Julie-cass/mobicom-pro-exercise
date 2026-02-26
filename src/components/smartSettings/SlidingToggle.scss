@@ -1,0 +1,52 @@
+
+.sliding-toggle-label {
+  position: relative;
+  display: inline-block;
+
+  width: 2.5rem;
+  height: 1.5rem;
+
+
+ & input {
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+  }
+}
+
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background: #ccc;
+  border-radius: 2.125rem;
+  
+  transition: 0.4s;
+  cursor: pointer;
+  
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1.125rem;
+    width: 1.125rem;
+    left: 0.1875rem;
+    bottom: 0.1875rem;
+    background: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+}
+
+
+input:checked + .slider {
+  background: #224f7e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1rem);
+}

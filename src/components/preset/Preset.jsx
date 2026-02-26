@@ -15,14 +15,14 @@ import sleepOff from "../../assets/icons/icon_sleep_off.png";
 
 
 
-export default function PresetScroll() {
+export default function PresetScroll({ activePreset, setActivePreset }) {
   const scrollRef = useRef(null);
-  const [activePreset, setActivePreset] = useState(null);
-const presets = [
-  { name: "Hjemme", onIcon: homeOn, offIcon: homeOff },
-  { name: "Ude", onIcon: awayOn, offIcon: awayOff },
-  { name: "Sover", onIcon: sleepOn, offIcon: sleepOff }
-];
+
+  const presets = [
+    { name: "Hjemme", onIcon: homeOn, offIcon: homeOff },
+    { name: "Ude", onIcon: awayOn, offIcon: awayOff },
+    { name: "Sover", onIcon: sleepOn, offIcon: sleepOff }
+  ];
 
   const handleWheel = (e) => {
     if (scrollRef.current) {
@@ -33,21 +33,24 @@ const presets = [
 
   return (
     <section className="PresetScrollSec" ref={scrollRef} onWheel={handleWheel}>
-  {presets.map((p, index) => (
-    <div className="PresetDivBox" key={index}>
-      <button id="shadow" 
-        className={activePreset === index ? "active" : ""}
-        onClick={() => setActivePreset(index)}
-      >
-        <div className="contentBtnDiv">
-        <img
-          src={activePreset === index ? p.onIcon : p.offIcon}
-          alt={p.name} className="preset-icon"/>
-        <p>{p.name}</p>
+      {presets.map((p, index) => (
+        <div className="PresetDivBox" key={index}>
+          <button
+            id="shadow"
+            className={activePreset === index ? "active" : ""}
+            onClick={() => setActivePreset(index)}
+          >
+            <div className="contentBtnDiv">
+              <img
+                src={activePreset === index ? p.onIcon : p.offIcon}
+                alt={p.name}
+                className="preset-icon"
+              />
+              <p>{p.name}</p>
+            </div>
+          </button>
         </div>
-      </button>
-    </div>
-  ))}
-</section>
+      ))}
+    </section>
   );
 }
