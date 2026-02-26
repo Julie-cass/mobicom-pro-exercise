@@ -29,13 +29,11 @@ export default function RoomScroll() {
 
   return (
     <section
-      className="RoomScrollSec"
-      ref={scrollRef}
-      onWheel={handleWheel}
-    >
+      className="RoomScrollSec" ref={scrollRef} onWheel={handleWheel}>
+
       {rooms.map((room, index) => (
         <div className="RoomDivBox" key={index}>
-          <button
+          <button id="shadow" 
             className={activeRoom === index ? "active" : ""}
             onClick={() => setActiveRoom(index)}
           >

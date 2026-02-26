@@ -1,0 +1,9 @@
+.navigationDiv{
+display: flex;
+justify-content: space-evenly;
+
+padding: 1rem 0;
+margin: 1.5rem 0 0 0;
+
+    background-color: white;
+}

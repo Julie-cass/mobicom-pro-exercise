@@ -1,6 +1,6 @@
 .RoomScrollSec {
   display: flex;
-  justify-content: space-evenly;
+
 
 
   overflow-x: auto;
@@ -14,9 +14,10 @@
 }
 
 .RoomDivBox {
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   align-items: center;
 
+  padding: 0 1.2rem;
 }
 
 .buttonContentBox {
@@ -52,7 +53,7 @@
 }
 //for active button
  .RoomDivBox button.active {
-  background: #0e3054;
+  background: #224f7e;
   color: white;
 }
 

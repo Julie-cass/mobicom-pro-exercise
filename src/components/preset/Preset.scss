@@ -15,12 +15,10 @@
 }
 
 .PresetDivBox {
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;   
-
+ border-radius: 1rem;
   align-items: center;
-border-radius: 0.8rem;
+
+  margin: 0 auto;
 
 
 .contentBtnDiv {
@@ -57,7 +55,7 @@ border-radius: 0.8rem;
 }
   //for active button
    .PresetDivBox button.active {
-    background: #0e3054;
+    background: #224f7e;
     color: white;
   }
 

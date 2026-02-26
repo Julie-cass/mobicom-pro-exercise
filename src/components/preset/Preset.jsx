@@ -35,7 +35,7 @@ const presets = [
     <section className="PresetScrollSec" ref={scrollRef} onWheel={handleWheel}>
   {presets.map((p, index) => (
     <div className="PresetDivBox" key={index}>
-      <button
+      <button id="shadow" 
         className={activePreset === index ? "active" : ""}
         onClick={() => setActivePreset(index)}
       >
