@@ -1,5 +1,7 @@
 import {NavLink} from 'react-router-dom';
 
+import "./NavMenu.css"
+
 import ActiveDashboard from "../../assets/icons/icon_menu_dashboad_active.png"
 import inActiveDashboard from "../../assets/icons/icon_menu_dashboad_inactive.png"
 
@@ -13,7 +15,7 @@ import LightIcon from "../../assets/icons/icon_menu_light.png"
 export default function Navigation(){
     return(
     <>
-
+<div className="navigationDiv">
 <NavLink to="/">
  {({isActive})=>(
   <img src={isActive ? ActiveDashboard : inActiveDashboard} alt="Dashboard" />
@@ -37,6 +39,8 @@ export default function Navigation(){
   <img src={LightIcon} alt="Statistics" />
  
     </NavLink>
+
+    </div>
     </>
     )
 }
