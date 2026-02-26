@@ -1,0 +1,70 @@
+.PresetScrollSec {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  
+
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  scrollbar-width: none;
+}
+
+.PresetDivBox {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;   
+
+  align-items: center;
+border-radius: 0.8rem;
+
+
+.contentBtnDiv {
+  display: flex;          
+  flex-direction: row;     
+  align-items: center;     
+  
+  gap: 0.5rem;             
+  margin: 0;              
+  padding: 0;     
+  
+  p {
+    margin: 0;               
+  }
+}
+
+}
+
+//for button in general
+.PresetDivBox button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem 1rem;
+
+  cursor: pointer;
+
+  background: white;
+  transition: 0.2s ease;
+}
+  //for active button
+   .PresetDivBox button.active {
+    background: #0e3054;
+    color: white;
+  }
+
+    .Preset-icon {
+      width: 2rem;
+      height: 2rem;
+      object-fit: contain;
+    }
+
+

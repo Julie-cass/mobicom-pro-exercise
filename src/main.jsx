@@ -1,7 +1,10 @@
-// main.jsx
+
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
+
+import "./global.scss"
 
 import Router from "./Router.jsx";
 

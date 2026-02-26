@@ -1,22 +1,18 @@
-import { useEffect } from "react";
-import { generateToken } from "../fetches/auth";
+import PresetScroll from "../components/preset/Preset";
+import RoomScroll from "../components/Rooms.jsx/RoomScroll";
 
 
 export default function HomePage() {
-    useEffect(() => {
-        const token = localStorage.getItem("authToken");
-
-        if (!token) {
-            generateToken("Your Name Here")
-                .then(() => console.log("Token created"))
-                .catch(console.error);
-        }
-    }, []);
 
     return (
         <>
             <div>
+
+
+<RoomScroll />
+<PresetScroll />
                 <h1>Smart Home</h1>
+
             </div>
         </>
     )

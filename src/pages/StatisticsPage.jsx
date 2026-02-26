@@ -1,9 +1,9 @@
-import Statistics from "../components/Statistics.jsx"
 
-export default function StatisticsPage({someRealId}){
+
+export default function StatisticsPage(){
     return(
     <>
-<Statistics  deviceId={someRealId} />
+<h1>bonk</h1>
     </>
     )
 }

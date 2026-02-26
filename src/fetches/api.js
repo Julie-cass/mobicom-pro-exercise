@@ -1,21 +1,23 @@
-const BASE_URL = "/api";
+const API_BASE = "https://exercise.mobicom-pro.com/api";
 
-export async function apiRequest(endpoint, options = {}) {
-  const token = localStorage.getItem("authToken");
+export const apiFetch = async (endpoint, options = {}) => {
+const token = localStorage.getItem("authToken");
 
-  const response = await fetch(`${BASE_URL}${endpoint}`, {
+if (!token) {
+  throw new Error("No authentication token found");
+}
+  const response = await fetch(`${API_BASE}${endpoint}`, {
     ...options,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-      ...options.headers,
+      "Authorization": `Bearer ${token}`,
+      ...(options.headers || {}),
     },
   });
 
   if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || "Something went wrong");
+    throw new Error("API request failed");
   }
 
   return response.json();
-}
+};
