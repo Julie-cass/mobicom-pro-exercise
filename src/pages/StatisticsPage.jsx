@@ -3,7 +3,7 @@
 export default function StatisticsPage(){
     return(
     <>
-<h1>bonk</h1>
+<h1>Statistik</h1>
     </>
     )
 }
