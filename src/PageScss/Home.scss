@@ -1,0 +1,30 @@
+.HomePageContainer {
+
+    h2 {
+        font-weight: 100;
+    }
+
+    .RoomTitleBox {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        border: none;
+        border-radius: 0.5rem;
+
+        box-sizing: border-box;
+
+    }
+}
+
+
+.SmartSettingsContainer {
+place-items: center;
+
+    .smartRow {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+    }
+}
