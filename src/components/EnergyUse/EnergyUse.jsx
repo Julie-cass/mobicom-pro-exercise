@@ -1,5 +1,6 @@
 import Consumption from "../../assets/icons/icon_consumption_on.png";
 import "./EnergyUse.scss"
+import { NavLink } from "react-router-dom";
 
 export default function EnergyUse() {
 
@@ -9,9 +10,9 @@ export default function EnergyUse() {
             <section className="EnergyUseSec">
                 <div id="shadow" className="EnergyUseDiv">
                     <div className="EnergyUseLeft">
-                        <span className="EnergyUseIconSpan">
+                        <NavLink to="statistics" className="EnergyUseIconSpan">
                             <img className="EnergyUseIcon" src={Consumption} alt="" />
-                        </span>
+                        </NavLink>
                         <span className="EnergyUseDate">
                             <h4>21 jan 2026</h4>
                             
