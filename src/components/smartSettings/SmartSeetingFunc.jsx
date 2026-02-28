@@ -15,7 +15,7 @@ export function SmartSettingFunc(){
                 kokken: {
                     name: "Lys i Køkken",
                     devices: {
-                        kokkenbord: false,
+                        køkkenbord: false,
                         loftlampe: false,
                     },
                 },
