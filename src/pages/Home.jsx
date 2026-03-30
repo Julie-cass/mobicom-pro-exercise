@@ -1,6 +1,6 @@
 
-import react, { useState } from "react";
-
+import react, { useState, useEffect } from "react";
+import {generateToken} from "../fetches/api.js";
 
 import EnergyUse from "../components/EnergyUse/EnergyUse";
 import PresetScroll from "../components/preset/Preset";
@@ -15,6 +15,18 @@ import "../PageScss/Home.scss"
 export default function HomePage() {
     const [activePreset, setActivePreset] = useState(null);
     const [activeWarmth, setActiveWarmth] = useState(null);
+
+
+    
+    useEffect(() => {
+  const token = localStorage.getItem("authToken");
+
+  if (!token) {
+    generateToken("John Doe");
+  } else {
+    console.log("EXISTING TOKEN:", token);
+ }
+}, []);
 
     return (
         <>

@@ -1,53 +1,55 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { getDevices } from "../../fetches/api";
 
-
-import TempSetting from "../../assets/icons/icon_temp-setting.png"
-import Temp from "../../assets/icons/icon_temp.png"
-
+import TempSetting from "../../assets/icons/icon_temp-setting.png";
+import Temp from "../../assets/icons/icon_temp.png";
 
 export function WarmthCompFunc() {
+  const [settingsState, setSettingsState] = useState({});
 
-  const settingsData = {
-    livingroom: {
-      title: "Varme i Stuen",
-      Fan_Coil: false,
-      icon: Temp,
-      warmth: "21C",
-      description: "Tidsplan - mode",
-      icon2: TempSetting,
-      link: "/settings",
-    },
-    bedroom: {
-      title: "Varme i Soveværelse",
-      Radiator: false,
-      icon: Temp,
-      warmth: "21C",
-      description: "Tidsplan - mode",
-      icon2: TempSetting,
-      link: "/settings",
-    },
-    bathroom: {
-      title: "Varme i Badeværelse",
-      Gulvvarme: false,
-      icon: Temp,
-      warmth: "21C",
-      description: "Tidsplan - mode",
-      icon2: TempSetting,
-      link: "/settings",
-    },
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const devices = await getDevices();
 
-  const [settingsState, setSettingsState] = useState(settingsData);
+            console.log("DEVICES:", devices);
 
- function toggleSetting(roomKey, deviceKey) {
-  setSettingsState(prev => ({
-    ...prev,
-    [roomKey]: {
-      ...prev[roomKey],
-      [deviceKey]: !prev[roomKey][deviceKey],
-    },
-  }));
-}
+        // 🔥 Transform API → your UI structure
+        const formatted = devices.reduce((acc, device) => {
+          const roomKey = device.name.toLowerCase(); // "Stue" → "stue"
+
+          acc[roomKey] = {
+            title: `Varme i ${device.name}`,
+            Heater: true, // you can map this smarter later
+            icon: Temp,
+            warmth: `${device.current_temp}°C`,
+            description: device.work_mode,
+            icon2: TempSetting,
+            link: "/settings",
+          };
+
+          return acc;
+        }, {});
+
+        setSettingsState(formatted);
+      } catch (err) {
+        console.error("Failed to fetch devices", err);
+      }
+    };
+
+    fetchData();
+
+  }, []);
+
+  function toggleSetting(roomKey, deviceKey) {
+    setSettingsState(prev => ({
+      ...prev,
+      [roomKey]: {
+        ...prev[roomKey],
+        [deviceKey]: !prev[roomKey][deviceKey],
+      },
+    }));
+  }
 
   return { settingsState, toggleSetting };
 }

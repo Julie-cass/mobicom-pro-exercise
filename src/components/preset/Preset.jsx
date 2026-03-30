@@ -26,7 +26,6 @@ export default function PresetScroll({ activePreset, setActivePreset }) {
 
   const handleWheel = (e) => {
     if (scrollRef.current) {
-      e.preventDefault();
       scrollRef.current.scrollLeft += e.deltaY;
     }
   };

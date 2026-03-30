@@ -22,7 +22,6 @@ export default function RoomScroll() {
 
   const handleWheel = (e) => {
     if (scrollRef.current) {
-      e.preventDefault();
       scrollRef.current.scrollLeft += e.deltaY;
     }
   };
