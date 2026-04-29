@@ -34,15 +34,15 @@ export default function WarmthComp() {
               <div className="SettingDesComp">
                 <img src={setting.icon} alt={setting.title} />
 
-<div className="WamthTxtInfo">
-                <p>{setting.warmth}</p>
-                <p>{setting.description}</p>
+                <div className="WamthTxtInfo">
+                  <p>{setting.warmth}</p>
+                  <p>{setting.description}</p>
                 </div>
               </div>
 
               <button className="WarmthBtn" onClick={() => navigate(setting.link)}>
                 <img src={setting.icon2} alt="" />
-               <p>Indstillinger</p>
+                <p>Indstillinger</p>
               </button>
 
             </div>

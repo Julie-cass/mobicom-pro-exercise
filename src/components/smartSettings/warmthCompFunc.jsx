@@ -15,11 +15,11 @@ export function WarmthCompFunc() {
             console.log("DEVICES:", devices);
 
         const formatted = devices.reduce((acc, device) => {
-          const roomKey = device.name.toLowerCase();
-
+        const roomKey = device.id;
+        
           acc[roomKey] = {
             title: `Varme i ${device.name}`,
-            Heater: true, 
+           Heater: device.is_on ?? false,
             icon: Temp,
             warmth: `${device.current_temp}°C`,
             description: device.work_mode,
