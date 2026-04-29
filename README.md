@@ -1,5 +1,5 @@
 link to assignment:  
- https://github.com/mobicom-pro-aps/frontend-developer-exercise?tab=readme-ov-file
+ https://github.com/mobicom-pro-aps/frontend-developer-exercise?tab=readme-ov-file  
 link to api:
 https://exercise.mobicom-pro.com/docs#/Devices/get_devices
 
