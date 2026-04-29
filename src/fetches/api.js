@@ -18,7 +18,7 @@ export const generateToken = async (name) => {
 
   localStorage.setItem("authToken", data.token);
 
-  console.log("TOKEN:", data.token); // 👈 ADD THIS
+  console.log("TOKEN:", data.token);
 
   return data.token;
 };

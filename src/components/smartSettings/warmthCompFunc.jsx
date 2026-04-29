@@ -14,13 +14,12 @@ export function WarmthCompFunc() {
 
             console.log("DEVICES:", devices);
 
-        // 🔥 Transform API → your UI structure
         const formatted = devices.reduce((acc, device) => {
-          const roomKey = device.name.toLowerCase(); // "Stue" → "stue"
+          const roomKey = device.name.toLowerCase();
 
           acc[roomKey] = {
             title: `Varme i ${device.name}`,
-            Heater: true, // you can map this smarter later
+            Heater: true, 
             icon: Temp,
             warmth: `${device.current_temp}°C`,
             description: device.work_mode,
